@@ -5,8 +5,11 @@ import { Component } from "@angular/core";
     //örn .movies  <div class="movies"></div> gibi
     selector: "movies", //<movies></movies>
 
-    templateUrl: "movies.component.html"
+    templateUrl: "movies.component.html",
     //template: "<h2>MovieS</h2>"   
+
+    //css Tanımlamaları alt ve ust componentlere etki etmez
+    styles: ['h2 { color :blue;}']
 
 })
 

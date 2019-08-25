@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Movie } from '../movie';
+import { Movies } from '../movie.datasource';
 
 @Component({
     //. # gibi css seçiciler ile kullanılabilir div etiketi ile ekele bilir
@@ -23,13 +23,8 @@ import { Movie } from '../movie';
 export class MoviesComponent {
 
     title = "Movie List";
-    movie: Movie = {
-        id: 1,
-        name: "Movie Name"
-    }
+    movies = Movies;
 
-    getTitle() {
-        return this.title
-    }
+
 
 }

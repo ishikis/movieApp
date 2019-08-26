@@ -11,6 +11,7 @@ export class MovieService {
 
   constructor() { }
 
+  //Observable degerleri assyncron calışır 
   getMovies(): Observable<Movie[]> {
     return of(Movies);
   }

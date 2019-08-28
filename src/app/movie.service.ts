@@ -10,11 +10,16 @@ import { LoggingService } from './logging.service';
 export class MovieService {
 
 
-  constructor(private loggingService:LoggingService) { }
+  constructor(private loggingService: LoggingService) { }
 
   //Observable degerleri assyncron calışır 
   getMovies(): Observable<Movie[]> {
     this.loggingService.add("MovieService:Listing movies");
     return of(Movies);
+  }
+
+  getMovie(id: number): Observable<Movie> {
+    this.loggingService.add('MovieService : get detail by id= ' + id);
+    return of(Movies.find(x => x.id === id));
   }
 }

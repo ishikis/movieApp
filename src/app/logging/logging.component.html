@@ -1,0 +1,9 @@
+<div class="card" *ngIf="ls.messages.length">
+    <div class="card-header">Mesaj Listesi</div>
+    <div class="card-body">
+<button (click)="ls.clear()" class="btn btn-primary btn-sm">clear</button>
+<hr>
+        <p *ngFor="let msg of ls.messages">{{msg}} </p>
+
+    </div>
+</div>
